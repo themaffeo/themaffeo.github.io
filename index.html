@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style_l.css">
 	<link rel="stylesheet" type="text/css" href="css/user_config.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
 
 	<script src="js/modernizr.min.js"></script>
 
@@ -28,10 +29,6 @@
 <ul class="navigation">
 
 	<li><a href="#about">About</a></li>
-
-	<li><a href="#portfolio">Portfolio</a></li>
-
-	<li><a href="#blog">Blog</a></li>
 
 	<li><a href="#contact">Contact</a></li>
 
@@ -55,7 +52,7 @@
 
 		<h2 class="portrait__description__title">I Build Successful Software</h2>
 
-		<p class="portrait__description__msg">Welcome to my portfolio!<br>Get to know <u>me</u> and my <u>work</u>.</p>
+		<p class="portrait__description__msg">Let's do something great together.</p>
 
 	</div>
 
@@ -90,9 +87,9 @@
 
 			<p>Hello, my name is Nathan Maffeo and I've been developing beautiful software solutions for 16 years.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>I specialize in a pragmatic approach to software development - knowing how what features to build and what stage to build them.</p>
+			
+            <p>If you have a project you're on fire about - let's talk!</p>
 
 			<h1 class="section-heading">Companies I've been working with:</h1>
 
@@ -157,7 +154,9 @@
 
 					<div class="emedu-list-1__location">Making taxes easy</div>
 
-					<div class="emedu-list-1__desc">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly.</div>
+					<div class="emedu-list-1__desc">Nathan sifted through hundreds of pages of cryptic government documentation to 
+                    <a href="images/tax-document.jpg" class="fancybox" title="An example of NIC tax calculation formulas">transform hundreds of formulas </a> into a simple and flexible tax engine for the United Kingdom. 
+                    </div>
 				</li>
 
 				<li>
@@ -165,13 +164,13 @@
 
 					<div class="emedu-list-1__location">Finding an artist in a haystack</div>
 
-					<div class="emedu-list-1__desc">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum.</div>
+					<div class="emedu-list-1__desc">With tens of thousands of user profiles, documents, and work samples, finding one artist or animator had become a tedious task.  Nathan architected a search engine that provided the ability to quickly refine searches by drilling down by special profile identifiers.</div>
 				</li>
 
 				<li>
 					<div class="emedu-list-1__date">Loom &amp; Mill</div>
-                    <div class="emedu-list-1__location">Zero to launch in 90-days</div>
-					<div class="emedu-list-1__desc"></div>
+                    <div class="emedu-list-1__location">Zero to launch in 90-Days</div>
+					<div class="emedu-list-1__desc">Tasked with creating a minimum viable product with a short deadline and limited funds, Nathan spearheaded a build-vs-buy task force and helped implement the solution helping the product achieve a successful and on time launch.</div>
 				</li>
 
 			</ul>
@@ -232,8 +231,8 @@
 			<div class="g-66">
                 <div class="contact__web">
                     <span class="icon-earth"></span>
-                    Do you have an idea you'd like feedback on? Just want to chat? <br />Shoot me an email &amp; let's get to
-                     to know eachother:
+                    Do you have an idea you'd like feedback on? Just want to chat? <br />Shoot me an email &amp; let's get
+                     to know each other:
                     <a href="mailto:the.maffeo@gmail.com">the.maffeo@gmail.com</a><br>
                     
                 </div>
@@ -275,6 +274,11 @@ Modernizr.load({
 <script src="js/maplace.min.js"></script>
 <script src="js/user_config.js"></script>
 <script src="js/custom.js"></script>
-
+<script src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".fancybox").fancybox();
+    });
+    </script>
 </body>
 </html>
