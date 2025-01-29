@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        .image-container {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+}
+
+.image-wrapper {
+    position: relative; /* Needed for absolute positioning of the link */
+    margin: 10px; /* Add some space between images */
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.save-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent grey */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px; /* Make it oval */
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.bordered-area {
+    width: calc(200px * 3 + 20px * 2); /* Calculate width based on images and margins */
+    height: 1px;
+    border: 1px solid black;
+    margin: 20px auto; /* Center the bordered area */
+    text-align: center; /* Center the text within */
+}
+    </style>
+    
+            
+</head>
+<body>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="http://x20web.corp.google.com/users/na/nathanmaffeo/hkitchen.jpg" alt="Image 1">
+            <a href="#" class="save-link" id="link1">Save</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://x20web.corp.google.com/users/na/nathanmaffeo/cool_dessert.jpg" alt="Image 2">
+            <a href="#" class="save-link" id="link2">Save</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://x20web.corp.google.com/users/na/nathanmaffeo/bavetts.jpg" alt="Image 3">
+            <a href="#" class="save-link" id="link3">Save</a>
+        </div>
+    </div>
+
+    <div class="bordered-area" id="borderedArea">
+        
+
+
+        
+    </div>
+<div id="txt1" style="display:none">
+
+    <h2>High-End &amp; Stylish Hotel Restaurants:</h2>
+
+<ul>
+  <li>
+    <p><strong>Catch at ARIA Resort &amp; Casino:</strong> Known for its stunning seafood, lively atmosphere, impressive design with high ceilings and dramatic lighting, and a see-and-be-seen crowd. Dress code leans towards smart casual.</p>
+  </li>
+  <li>
+    <p><strong>Majordano's at Wynn Las Vegas:</strong> Offers a sophisticated dining experience with classic Italian cuisine, elegant decor, and a refined yet energetic atmosphere. Smart casual to dressy attire is recommended.</p>
+  </li>
+  <li>
+    <p><strong>Picasso at Bellagio:</strong> A Michelin-starred restaurant with exquisite French cuisine, beautiful artwork, and views of the Bellagio fountains. Dress code is definitely on the dressier side of smart casual.</p>
+  </li>
+  <li>
+    <p><strong>Joël Robuchon Restaurant at MGM Grand:</strong> Another Michelin-starred option for a truly luxurious and unforgettable dining experience. The ambiance is elegant and intimate, with a dress code that leans towards formal. (Might be a bit <em>too</em> formal based on the casual elements in the original image, but worth considering if the user prioritizes high-end).</p>
+  </li>
+</ul>
+
+<h2>Modern &amp; Trendy Restaurants (not necessarily in hotels):</h2>
+
+<ul>
+  <li>
+    <p><strong>Beauty &amp; Essex at The Cosmopolitan of Las Vegas:</strong> Hidden behind a pawn shop, this restaurant offers a unique and stylish dining experience with a diverse menu and a lively atmosphere. Smart casual dress code.</p>
+  </li>
+  <li>
+    <p><strong>Hakkasan at MGM Grand:</strong> A renowned Cantonese restaurant with a modern, chic design, a vibrant nightclub atmosphere, and excellent food. Dress code is trendy and smart casual.</p>
+  </li>
+  <li>
+    <p><strong>Mon Ami Gabi at Paris Las Vegas:</strong> While not as overtly modern, this bustling French bistro offers a lively and enjoyable atmosphere with classic dishes and a view of the Bellagio fountains. Dress code is relaxed but stylish casual.</p>
+  </li>
+</ul>
+
+<p>To help narrow down the best matches, ask the user clarifying questions:</p>
+
+<ul>
+  <li>
+    <p><strong>How important is it that the restaurant be inside a hotel or resort?</strong></p>
+  </li>
+  <li>
+    <p><strong>What kind of cuisine are they interested in?</strong></p>
+  </li>
+  <li>
+    <p><strong>What is their budget?</strong> (The listed restaurants range in price.)</p>
+  </li>
+  <li>
+    <p><strong>How crucial is the 'open kitchen' element?</strong></p>
+  </li>
+  <li>
+    <p><strong>Are they looking for a place that is also a bit of a scene, or more focused on the dining experience?</strong></p>
+  </li>
+</ul>
+</div>
+    
+    <div id="txt2" style="display:none">
+       <p>Given the description, the user enjoys a place with the following characteristics:</p>
+
+
+<p>Here are some suggestions for similar places in Las Vegas, keeping these preferences in mind:</p>
+
+<h2>For the Dessert &amp; Dining Experience:</h2>
+
+<ul>
+  <li>
+    <p><strong>Bardot Brasserie (Aria Resort &amp; Casino):</strong> Known for its sophisticated, yet approachable atmosphere and French-inspired cuisine. They likely have excellent dessert options, and the overall ambiance fits the upscale casual vibe.</p>
+  </li>
+  <li>
+    <p><strong>Carson Kitchen (Downtown):</strong> A popular gastropub with a warm and inviting atmosphere. They often feature creative, elevated comfort food and delicious desserts.</p>
+  </li>
+  <li>
+    <p><strong>Esther's Kitchen (Arts District):</strong> Italian-focused with a strong emphasis on handcrafted pasta and seasonal dishes. Their dessert menu often includes interesting takes on classic treats. Check for sticky toffee pudding variations.</p>
+  </li>
+  <li>
+    <p><strong>Honey Salt (Rampart Casino):</strong> Known for its farm-to-table approach and seasonally-inspired menu. Their dessert menu often includes creative and beautifully plated options.</p>
+  </li>
+</ul>
+
+<h2>Specifically for Excellent Desserts:</h2>
+
+<ul>
+  <li>
+    <p><strong>Payne Killer (Cosmopolitan Resort &amp; Casino):</strong> While their focus is on cocktails, they also offer a curated selection of desserts that often include creative and decadent options.</p>
+  </li>
+  <li>
+    <p><strong>The Chandelier Bar (Cosmopolitan Resort &amp; Casino):</strong> This stunning multi-level bar also has a fantastic dessert menu, focusing on elegant presentations and unique flavor combinations.</p>
+  </li>
+</ul>
+
+<p><strong>Important Note:</strong> It's always best to check menus online or call ahead to confirm if a restaurant currently offers sticky toffee pudding or a similar dessert. Seasonal menus can change.</p>
+
+<p>To help me narrow down the recommendations, tell me:</p>
+
+<ul>
+  <li>
+    <p><strong>What is most important to the user: the specific dessert, the ambiance, the price point, or the location in Las Vegas?</strong></p>
+  </li>
+  <li>
+    <p><strong>Does the user prefer a specific type of cuisine beyond desserts (e.g., French, Italian, American)?</strong></p>
+  </li>
+</ul>
+    </div>
+    <div id="txt3" style="display:none">
+        <p>Given the user's preference for dimly lit, sophisticated venues with a vintage, perhaps Art Deco-inspired aesthetic, here are a few similar places in Las Vegas they might enjoy:</p>
+
+<h2>For a romantic dinner or special occasion:</h2>
+
+<ul>
+  <li>
+    <p><strong>The Rose. Rabbit. Lie. at The Cosmopolitan:</strong> This opulent supper club embodies the romantic, intimate, and luxurious vibe described. It features live entertainment, a vintage-inspired design, and a menu focusing on shared plates. Expect a dress code leaning towards cocktail attire.</p>
+  </li>
+  <li>
+    <p><strong>Beauty &amp; Essex at The Cosmopolitan:</strong> Hidden behind a pawn shop, this restaurant offers a similar sense of mystery and exclusivity. The décor is lavish, with antique-inspired details and a grand chandelier. The menu is modern American with a focus on shared plates. Dress code is smart casual to semi-formal.</p>
+  </li>
+  <li>
+    <p><strong>Scarpetta at The Cosmopolitan:</strong> While not as vintage-themed, Scarpetta offers a romantic, dimly lit ambiance with elegant décor. The Italian cuisine is renowned, and the service is impeccable. Smart casual to semi-formal attire would be appropriate.</p>
+  </li>
+  <li>
+    <p><strong>Bardot Brasserie at Aria Resort &amp; Casino:</strong> This French brasserie evokes a sense of old-world charm with its Parisian décor and dim lighting. The menu features classic French dishes and an extensive wine list. Smart casual to semi-formal attire is recommended.</p>
+  </li>
+</ul>
+
+<h2>For cocktails or a sophisticated night out:</h2>
+
+<ul>
+  <li>
+    <p><strong>The Chandelier Bar at The Cosmopolitan:</strong> This multi-level bar is literally draped in crystals, offering a glamorous and luxurious setting for cocktails. The different levels offer varied vibes, from a high-energy lounge to a more intimate cocktail bar. Smart casual to semi-formal dress is appropriate.</p>
+  </li>
+  <li>
+    <p><strong>Rosina Cocktail Lounge at The Palazzo:</strong> This intimate cocktail lounge channels a classic Hollywood glamour vibe, with plush seating, vintage-inspired décor, and a focus on craft cocktails. Smart casual attire would be suitable.</p>
+  </li>
+  <li>
+    <p><strong>Skyfall Lounge at Delano Las Vegas:</strong> While not vintage-themed, Skyfall Lounge offers stunning views of the city alongside sophisticated cocktails in a dimly lit, elegant setting. Smart casual to semi-formal attire is recommended.</p>
+  </li>
+</ul>
+
+<p>Before making a reservation, I recommend checking each venue's website to confirm the dress code and ambiance aligns with the user's specific preferences. Enjoy!</p>
+    </div>
+<script>
+
+
+    
+    
+const saveLinks = document.querySelectorAll('.save-link');
+const borderedArea = document.getElementById('borderedArea');
+
+
+saveLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the link from actually going anywhere
+       
+        const currentTime = new Date().toLocaleString();
+        borderedArea.textContent = currentTime;
+
+        if (link.id=='link1'){
+            
+            borderedArea.innerHTML = document.getElementById("txt1").innerHTML;
+        }
+        if (link.id=='link2'){
+            
+            borderedArea.innerHTML = document.getElementById("txt2").innerHTML;
+        }
+        if (link.id=='link3'){
+            
+            borderedArea.innerHTML = document.getElementById("txt3").innerHTML;
+        }
+    });
+});
+        </script>
+</body>
+</html>
