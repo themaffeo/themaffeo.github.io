@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara's Birthday Run</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .event-date {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 18px 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            color: #ffd700;
+        }
+
+        .event-details {
+            background: #16213e;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .detail-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .detail-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .detail-card h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .detail-card p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .distances {
+            background: #1a1a2e;
+        }
+
+        .distance-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .distance-card {
+            background: linear-gradient(145deg, #16213e, #1a1a2e);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid #667eea;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .distance-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+        }
+
+        .distance-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .distance-card .conversion {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 25px;
+        }
+
+        .route-embed {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .route-embed iframe {
+            display: block;
+            border-radius: 10px;
+        }
+
+        .brunch {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            text-align: center;
+        }
+
+        .brunch .section-title {
+            color: #fff;
+        }
+
+        .brunch-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .brunch-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .brunch-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .deadline {
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .deadline strong {
+            color: #ffd700;
+        }
+
+        .register-section {
+            background: #16213e;
+            text-align: center;
+        }
+
+        .register-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #0f0f23;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .distance-card h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="tarasbigrunlogo.png" alt="Tara's Big Run Logo" class="hero-logo">
+            <p class="event-date">November 1, 2025</p>
+            <p class="tagline">Celebrate with a run and brunch!</p>
+            <a href="https://forms.gle/P94jp947txDy5SeU8" class="register-btn">Register Now</a>
+        </div>
+    </section>
+
+    <section class="event-details">
+        <div class="container">
+            <h2 class="section-title">Event Details</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="icon">&#x1F3C3;</div>
+                    <h3>Start Time</h3>
+                    <p>8:30 AM</p>
+                </div>
+                <div class="detail-card">
+                    <div class="icon">&#x1F4CD;</div>
+                    <h3>Location</h3>
+                    <p>Sacramento Area</p>
+                </div>
+                <div class="detail-card">
+                    <div class="icon">&#x1F382;</div>
+                    <h3>Date</h3>
+                    <p>Saturday, November 1st</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="distances">
+        <div class="container">
+            <h2 class="section-title">Choose Your Distance</h2>
+            <div class="distance-cards">
+                <div class="distance-card">
+                    <h3>39 Furlongs</h3>
+                    <p class="conversion">Approximately 4.87 miles / 7.84 km</p>
+                    <p>The birthday distance for the bold!</p>
+                    <div class="route-embed">
+                        <iframe allowtransparency="true" frameborder="0" height="405" scrolling="no" src="https://www.strava.com/routes/3537596566374908966/embed" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="distance-card">
+                    <h3>3.9 Kilometers</h3>
+                    <p class="conversion">Approximately 2.42 miles</p>
+                    <p>A fun distance for everyone!</p>
+                    <div class="route-embed">
+                        <iframe allowtransparency="true" frameborder="0" height="405" scrolling="no" src="https://www.strava.com/routes/3537596566374071334/embed" width="100%"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brunch">
+        <div class="container">
+            <h2 class="section-title">Post-Race Brunch</h2>
+            <div class="brunch-content">
+                <h3>Butter and Bacon</h3>
+                <p>Join us after the run for a celebratory birthday brunch!</p>
+                <p>Sacramento, CA</p>
+                <div class="deadline">
+                    <p><strong>RSVP Required by October 10</strong></p>
+                    <p>Please indicate brunch attendance when you register</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="register-section">
+        <div class="container">
+            <h2 class="section-title">Ready to Run?</h2>
+            <p>Sign up now and join the celebration!</p>
+            <a href="https://forms.gle/P94jp947txDy5SeU8" class="register-btn">Register Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Tara's Birthday Run 2025</p>
+    </footer>
+</body>
+</html>
